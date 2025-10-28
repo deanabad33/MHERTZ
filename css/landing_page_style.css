@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../assets/Mhertz-Background-2.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Centered Title */
+.center-title {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 500;
+    color: #03045e;
+    pointer-events: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.center-title .brand {
+    font-size: 9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.center-title .tagline {
+    font-size: 3rem;
+    margin-top: 0.4rem;
+    font-weight: 650;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo img {
+    height: 50px;
+}
+
+.nav-logo a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-logo a:hover {
+    opacity: 0.8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.book-now-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.book-now-btn:hover {
+    background: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 5% 0 5%;
+}
+
+.hero-content {
+    color: white;
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: black;
+}
+
+.hero-image {
+    max-width: 45%;
+    height: auto;
+    position: relative;
+    right: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05);
+    }
+}
+
+.cta-button {
+    background: #ffc107;
+    color: #333;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #ffb300;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: bounce 0.8s infinite;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    color: #4267B2;  /* Facebook brand blue color */
+    font-size: 3rem;
+    margin-right: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: #385898;  /* Darker Facebook blue on hover */
+}
+
+.partner-logos {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-logos img {
+    height: 80px;  /* Increased from 40px */
+    width: auto;   /* Maintain aspect ratio */
+    object-fit: contain;
+}
