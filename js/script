@@ -1,0 +1,41 @@
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Get the login form element
+    const loginForm = document.getElementById('loginForm');
+    
+    // Add form submission handler
+    loginForm.addEventListener('submit', (e) => {
+        // Prevent the default form submission
+        e.preventDefault();
+        
+        // Get form input values
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        
+        // Basic front-end validation
+        if (!username || !password) {
+            alert('Please fill in all fields');
+            return;
+        }
+        
+        // Here you would typically make an API call to your backend
+        // For now, just show a message since this is front-end only
+        console.log('Login attempted with:', { username });
+        alert('Login functionality will be implemented in the backend phase.');
+    });
+
+    // Add input focus effects
+    const inputs = document.querySelectorAll('input');
+    
+    inputs.forEach(input => {
+        // Add focus effect to parent container
+        input.addEventListener('focus', () => {
+            input.parentElement.classList.add('input-focused');
+        });
+        
+        // Remove focus effect when input loses focus
+        input.addEventListener('blur', () => {
+            input.parentElement.classList.remove('input-focused');
+        });
+    });
+});
